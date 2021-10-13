@@ -1,14 +1,15 @@
 body {
    color: blueviolet; 
 }
+
 .terrariet {
-   position:absolute
-   background-color:rgb(66, 214, 255)
-   padding right: 5px
-   padding left: 5px
-   padding bottom: 5px
-   padding top: 5px 
-   height: 200px
-   width: 40%
+   position:absolute;
+   background-color: rgb(66, 214, 255);
+   padding-right: 5px;
+   padding-left: 5px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   height: 200px;
+   width: 40%;
 
 }
