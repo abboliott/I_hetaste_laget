@@ -12,7 +12,7 @@ body {
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 50%;
+   left: 80%;
    top: 50%;
    transform: translate(-50%, -50%);
 }
@@ -40,7 +40,7 @@ body {
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 75%;
+   left: 70%;
    top: 75%;
    transform: translate(-50%, -50%);
 }
@@ -54,7 +54,21 @@ body {
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 25%;
+   left: 30%;
    top: 75%;
+   transform: translate(-50%, -50%);
+}
+.översta_våningen {
+   position: absolute;
+   background-color: rgb(66, 214, 255);
+   margin: auto;
+   width: 30%;
+   height: 5%;
+   border: 5px;
+   padding: 10px;
+   text-align: center;
+   justify-content: center;
+   left: 20%;
+   top: 50%;
    transform: translate(-50%, -50%);
 }
