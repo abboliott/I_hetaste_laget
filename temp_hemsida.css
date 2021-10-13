@@ -30,3 +30,31 @@ body {
    top: 25%;
    transform: translate(-50%, -50%);
 }
+.kafeterian {
+   position: absolute;
+   background-color: rgb(66, 214, 255);
+   margin: auto;
+   width: 30%;
+   height: 5%;
+   border: 5px;
+   padding: 10px;
+   text-align: center;
+   justify-content: center;
+   left: 75%;
+   top: 75%;
+   transform: translate(-50%, -50%);
+}
+.lab_10 {
+   position: absolute;
+   background-color: rgb(66, 214, 255);
+   margin: auto;
+   width: 30%;
+   height: 5%;
+   border: 5px;
+   padding: 10px;
+   text-align: center;
+   justify-content: center;
+   left: 25%;
+   top: 75%;
+   transform: translate(-50%, -50%);
+}
