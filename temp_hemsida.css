@@ -15,6 +15,7 @@ body {
    left: 80%;
    top: 50%;
    transform: translate(-50%, -50%);
+   cursor: pointer;
 }
 .källaren {
    position: absolute;
@@ -29,6 +30,7 @@ body {
    left: 50%;
    top: 25%;
    transform: translate(-50%, -50%);
+   cursor: pointer;
 }
 .kafeterian {
    position: absolute;
@@ -43,6 +45,7 @@ body {
    left: 70%;
    top: 75%;
    transform: translate(-50%, -50%);
+   cursor: pointer;
 }
 .lab_10 {
    position: absolute;
@@ -57,6 +60,7 @@ body {
    left: 30%;
    top: 75%;
    transform: translate(-50%, -50%);
+   cursor: pointer;
 }
 .översta_våningen {
    position: absolute;
@@ -71,6 +75,7 @@ body {
    left: 20%;
    top: 50%;
    transform: translate(-50%, -50%);
+   cursor: pointer;
 }
 .genomsnitt_temp {
    position: absolute;
@@ -85,4 +90,5 @@ body {
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
+   cursor: pointer;
 }
