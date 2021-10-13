@@ -16,3 +16,17 @@ body {
    top: 50%;
    transform: translate(-50%, -50%);
 }
+.källaren {
+   position: absolute;
+   background-color: rgb(66, 214, 255);
+   margin: auto;
+   width: 30%;
+   height: 5%;
+   border: 5px;
+   padding: 10px;
+   text-align: center;
+   justify-content: center;
+   left: 50%;
+   top: 25%;
+   transform: translate(-50%, -50%);
+}
