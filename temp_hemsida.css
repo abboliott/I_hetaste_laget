@@ -12,7 +12,13 @@ body {
 
 .text_genomsnitt {
    line-height: 1em;
-   margin-top: 41%;
+   margin-top: 30%;
+}
+
+.genomsnitt_temp_temp{
+margin: 1em;
+padding: 1em;
+line-height: 1em;
 }
 
 .terrariet {
