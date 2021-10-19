@@ -1,6 +1,8 @@
 body {
-   color: blueviolet; 
+   color: rgb(0, 0, 0); 
    background-image: url("https://static.posters.cz/image/1300/fototapet/above-the-clouds-sky-i77999.jpg");
+   font-family: "Comic Sans MS", "Comic Sans", cursive;
+
 }
 
 
@@ -83,14 +85,18 @@ body {
    position: absolute;
    background-color: rgb(66, 214, 255);
    margin: auto;
-   width: 30%;
-   height: 5%;
-   border: 5px solid rgb(0, 0, 0);
-   padding: 10px;
+   width: 200px;
+   height: 200px;
+   border: 5px solid rgb(255, 255, 255);
+   padding: 10;
+   line-height:200px;
    text-align: center;
    justify-content: center;
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
    cursor: pointer;
+   border-radius: 50%;
+   opacity: 0.8;
+   
 }
