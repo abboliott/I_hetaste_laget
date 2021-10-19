@@ -1,8 +1,12 @@
 body {
    color: rgb(255, 255, 255); 
-   background-image: url("https://static.posters.cz/image/1300/fototapet/above-the-clouds-sky-i77999.jpg");
+   background-image: url("https://images.hdqwalls.com/wallpapers/to-the-sky-qu.jpg");
    font-family: "Comic Sans MS", "Comic Sans", cursive;
    font-size: larger;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   background-size: 100%;
 }
 
 
@@ -34,8 +38,8 @@ body {
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 50%;
-   top: 20%;
+   left: 70%;
+   top: 85%;
    transform: translate(-50%, -50%);
    cursor: pointer;
    opacity: 0.85;
@@ -51,8 +55,8 @@ body {
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 70%;
-   top: 80%;
+   left: 20%;
+   top: 50%;
    transform: translate(-50%, -50%);
    cursor: pointer;
    opacity: 0.85;
@@ -69,7 +73,7 @@ body {
    text-align: center;
    justify-content: center;
    left: 30%;
-   top: 80%;
+   top: 85%;
    transform: translate(-50%, -50%);
    cursor: pointer;
    opacity: 0.85;
@@ -85,8 +89,8 @@ body {
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 20%;
-   top: 50%;
+   left: 50%;
+   top: 15%;
    transform: translate(-50%, -50%);
    cursor: pointer;
    opacity: 0.85;
@@ -109,8 +113,8 @@ body {
    cursor: pointer;
    border-radius: 50%;
    opacity: 0.85;
-   
 }
+
 .genomsnitt_temp:hover, .översta_våningen:hover, .lab_10:hover, .kafeterian:hover, .källaren:hover, .terrariet:hover {
    opacity: 1.0;
 }
