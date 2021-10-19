@@ -1,78 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="temp_hemsida.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="temp_hemsida.css">
+  ...
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-    
+</head>
 
-<div>
-    <button class="terrariet" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#terrarietModal">Terrariet</button>
+<body>
+  <div>
+    <div>
+      <button class="kafeterian" type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#kafeterianModal">kafeterian</button>
+      <!-- Modal -->
+      <div class="modal fade" id="kafeterianModal" tabindex="-1" aria-labelledby="kafeterianModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="kafeterianModalLabel" style="color:black">Kafeterian
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="modal-body" style="color:black">
+            <div id="chart_kafeterian"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="terrariet" type="button" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#terrarietModal">Terrariet</button>
+  <!-- Modal -->
+  <div class="modal fade" id="terrarietModal" tabindex="-1" aria-labelledby="terrarietModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="terrarietModalLabel" style="color:black">Terrariet
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body" style="color:black">
+        <div id="chart_terrariet"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <button class="lab_10" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lab_10Modal">Lab
+    10</button>
+  <div class="modal fade" id="lab_10Modal" tabindex="-1" aria-labelledby="lab_10ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="lab_10ModalLabel" style="color:black">Lab 10
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body" style="color:black">
+        <div id="chart_lab_10"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <button class="källaren" type="button" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#källaren">källaren
+  </button>
+  <div class="modal fade" id="källarenModal" tabindex="-1" aria-labelledby="källarenModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="källarenModalLabel" style="color:black">Källaren
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body" style="color:black">
+        <div id="källaren_10"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <body>
+    <div>
+      <div>
+        <button class="översta_våningen" type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#översta_våningenModal">översta_våningen</button>
+        <!-- Modal -->
+        <div class="modal fade" id="översta_våningenModal" tabindex="-1" aria-labelledby="översta_våningenModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="översta_våningenModalLabel" style="color:black">översta_våningen
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="modal-body" style="color:black">
+              <div id="chart_översta_våningen"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="genomsnittliga_temperaturer" type="button" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#genomsnittliga_temperaturModal">Terrar</button>
     <!-- Modal -->
     <div class="modal fade" id="terrarietModal" tabindex="-1" aria-labelledby="terrarietModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+      <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+          <div class="modal-header">
             <h5 class="modal-title" id="terrarietModalLabel" style="color:black">Terrariet
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           </div>
-            <div class="modal-body" style="color:black">
-                ..++ <!--Load the AJAX API-->
-                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                <script type="text/javascript">
-            
-                  // Load the Visualization API and the corechart package.
-                  google.charts.load('current', {'packages':['corechart']});
-            
-                  // Set a callback to run when the Google Visualization API is loaded.
-                  google.charts.setOnLoadCallback(drawChart);
-            
-                  // Callback that creates and populates a data table,
-                  // instantiates the pie chart, passes in the data and
-                  // draws it.
-                  function drawChart() {
-            
-                    // Create the data table.
-                    var data = new google.visualization.DataTable();
-                    data.addColumn('string', 'terrariet');
-                    data.addColumn('number', 'temp');
-                    data.addRows([
-                      ['terrariet', 3],
-                     
-                    ]);
-            
-                    // Set chart options
-                    var options = {'title':'Temp (celsius)',
-                                   'width':400,
-                                   'height':300};
-            
-                    // Instantiate and draw our chart, passing in some options.
-                    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-                    chart.draw(data, options);
-                  }
-                </script>
-                </head>
-<body>
-
-    <body>
-        <!--Div that will hold the pie chart-->
-        <div id="chart_div"></div>
-      </body>
+          </div>
+        </div>
+        <div class="modal-body" style="color:black">
+          <div id="chart_terrariet"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
 
 
-        
-    
-  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <script src="temp_hemsida.js"></script>
+    <script type="text/javascript">
 
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', { 'packages': ['corechart'] });
 
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
 
- 
+      // Callback that creates and populates a data table,
+      // instantiates the line chart, passes in the data and
+      // draws it.
+      function drawChart() {
 
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'kafeterian');
+        data.addColumn('number', 'temp');
+        data.addRows([
+          ['kafeterian', 3],
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="temp_hemsida.js"></script>
-</body>
+        ]);
+
+        // Set chart options
+        var options = {
+          'title': 'Temp (celsius)',
+          'width': 400,
+          'height': 300
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chartKafeterian = new google.visualization.LineChart(document.getElementById('chart_kafeterian'));
+        chartKafeterian.draw(data, options);
+
+        // Instantiate and draw our chart, passing in some options.
+        var chartTerrariet = new google.visualization.LineChart(document.getElementById('chart_terrariet'));
+        chartTerrariet.draw(data, options);
+
+        var chartlab_10 = new google.visualization.LineChart(document.getElementById('chart_lab_10'));
+        chartlab_10.draw(data, options);
+
+        var chartkällaren = new google.visualization.LineChart(document.getElementById('chartkällaren'));
+        chartkällaren.draw(data, options);
+
+        // Instantiate and draw our chart, passing in some options.
+        var chartöversta_våningen = new google.visualization.LineChart(document.getElementById('chart_översta_våningen'));
+        chartöversta_våningen.draw(data, options);
+
+        // Instantiate and draw our chart, passing in some options.
+        var chartgenomsnittliga_temperatur = new google.visualization.LineChart(document.getElementById('chartgenomsnittliga_temperatur'));
+        chartgenomsnittliga_temperatur.draw(data, options);
+      }
+    </script>
+  </body>
+
+</html>
