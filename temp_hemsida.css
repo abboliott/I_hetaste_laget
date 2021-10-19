@@ -10,19 +10,22 @@ body {
    background-size: 100%;
 }
 
-
+.text_genomsnitt {
+   line-height: 1em;
+   margin-top: 41%;
+}
 
 .terrariet {
    position: absolute;
    background-color: #f36979;
    margin: auto;
-   width: 20%;
-   height: 5%;
+   width: 15%;
+   height: 15%;
    border: 5px solid rgb(255, 255, 255);
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 80%;
+   left: 88%;
    top: 50%;
    transform: translate(-50%, -50%);
    cursor: pointer;
@@ -33,13 +36,13 @@ body {
    position: absolute;
    background-color: #f36979;
    margin: auto;
-   width: 20%;
-   height: 5%;
+   width: 15%;
+   height: 15%;
    border: 5px solid rgb(255, 255, 255);
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 70%;
+   left: 80%;
    top: 85%;
    transform: translate(-50%, -50%);
    cursor: pointer;
@@ -47,16 +50,16 @@ body {
    border-radius: 15px;
 }
 .kafeterian {
-   position: fixed;
+   position: absolute;
    background-color: #f36979;
    margin: auto;
-   width: 20%;
-   height: 5%;
+   width: 15%;
+   height: 15%;
    border: 5px solid rgb(255, 255, 255);
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 20%;
+   left: 42%;
    top: 50%;
    transform: translate(-50%, -50%);
    cursor: pointer;
@@ -65,16 +68,16 @@ body {
    z-index: 5;
 }
 .lab_10 {
-   position: fixed;
+   position: absolute;
    background-color: #f36979;
    margin: auto;
-   width: 20%;
-   height: 5%;
+   width: 15%;
+   height: 15%;
    border: 5px solid rgb(255, 255, 255);
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 30%;
+   left: 50%;
    top: 85%;
    transform: translate(-50%, -50%);
    cursor: pointer;
@@ -86,13 +89,13 @@ body {
    position: absolute;
    background-color: #f36979;
    margin: auto;
-   width: 20%;
-   height: 5%;
+   width: 15%;
+   height: 15%;
    border: 5px solid rgb(255, 255, 255);
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 50%;
+   left: 65%;
    top: 15%;
    transform: translate(-50%, -50%);
    cursor: pointer;
@@ -105,12 +108,12 @@ body {
    margin: auto;
    width: 250px;
    height: 250px;
-   border: 10px solid rgb(255, 255, 255);
+   border: 5px solid rgb(255, 255, 255);
    padding: 10;
    line-height:250px;
    text-align: center;
    justify-content: center;
-   left: 50%;
+   left: 65%;
    top: 50%;
    transform: translate(-50%, -50%);
    cursor: pointer;
