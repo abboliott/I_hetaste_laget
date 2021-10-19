@@ -14,7 +14,7 @@ body {
 
 .terrariet {
    position: absolute;
-   background-color: rgb(245, 70, 70);
+   background-color: #f36979;
    margin: auto;
    width: 20%;
    height: 5%;
@@ -31,7 +31,7 @@ body {
 }
 .källaren {
    position: absolute;
-   background-color: rgb(245, 70, 70);
+   background-color: #f36979;
    margin: auto;
    width: 20%;
    height: 5%;
@@ -48,7 +48,7 @@ body {
 }
 .kafeterian {
    position: fixed;
-   background-color: rgb(245, 70, 70);
+   background-color: #f36979;
    margin: auto;
    width: 20%;
    height: 5%;
@@ -66,7 +66,7 @@ body {
 }
 .lab_10 {
    position: fixed;
-   background-color: rgb(245, 70, 70);
+   background-color: #f36979;
    margin: auto;
    width: 20%;
    height: 5%;
@@ -84,7 +84,7 @@ body {
 }
 .översta_våningen {
    position: absolute;
-   background-color: rgb(245, 70, 70);
+   background-color: #f36979;
    margin: auto;
    width: 20%;
    height: 5%;
@@ -101,11 +101,11 @@ body {
 }
 .genomsnitt_temp {
    position: absolute;
-   background-color: rgb(245, 70, 70);
+   background-color: #f36979;
    margin: auto;
    width: 250px;
    height: 250px;
-   border: 10px outset rgb(255, 255, 255);
+   border: 10px solid rgb(255, 255, 255);
    padding: 10;
    line-height:250px;
    text-align: center;
@@ -115,7 +115,7 @@ body {
    transform: translate(-50%, -50%);
    cursor: pointer;
    border-radius: 50%;
-   opacity: 0.85;
+   opacity: 0.9;
 }
 
 .genomsnitt_temp:hover, .översta_våningen:hover, .lab_10:hover, .kafeterian:hover, .källaren:hover, .terrariet:hover {
