@@ -54,6 +54,11 @@ line-height: 1em;
    cursor: pointer;
    opacity: 0.85;
    border-radius: 15px;
+      background-image:url(https://cdn-icons-png.flaticon.com/512/3799/3799690.png);
+      background-size: 40px;
+      background-repeat: no-repeat;
+      
+
 }
 .kafeterian {
    position: absolute;
@@ -125,6 +130,7 @@ line-height: 1em;
    cursor: pointer;
    border-radius: 50%;
    opacity: 0.9;
+      background-image: url(https://icons.veryicon.com/png/System/Icons8%20Metro%20Style/Weather%20Sun.png);
 }
 
 .genomsnitt_temp:hover, .översta_våningen:hover, .lab_10:hover, .kafeterian:hover, .källaren:hover, .terrariet:hover {
@@ -150,3 +156,4 @@ line-height: 1em;
    padding-top: 20px;
    line-height: 1.5em;
 }
+
