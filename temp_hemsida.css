@@ -125,7 +125,7 @@ line-height: 1em;
       background-image: url(https://cdn-icons-png.flaticon.com/512/116/116251.png);
       background-repeat: no-repeat;
       background-size: 40px;
-      background-position-y: center;
+      background-position-y: bottom;
 }
 .genomsnitt_temp {
    position: absolute;
