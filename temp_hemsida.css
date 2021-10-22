@@ -10,112 +10,146 @@ body {
    background-size: 100%;
 }
 
+.text_genomsnitt {
+   line-height: 1em;
+   margin-top: 30%;
+}
 
+.genomsnitt_temp_temp{
+margin: 1em;
+padding: 1em;
+line-height: 1em;
+}
 
 .terrariet {
    position: absolute;
-   background-color: rgb(245, 70, 70);
+   background-color: #f36979;
    margin: auto;
-   width: 20%;
-   height: 5%;
+   width: 15%;
+   height: 15%;
+   border: 5px solid rgb(255, 255, 255);
+   padding: 10px;
+   text-align: center;
+   justify-content: center;
+   left: 88%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   cursor: pointer;
+   opacity: 0.85;
+   border-radius: 15px;
+      background-image: url(https://cdn-icons.flaticon.com/png/512/1291/premium/1291594.png?token=exp=1634738455~hmac=7bc7a3c5a741ed7e20bb829c60ddf576);
+      background-repeat: no-repeat;
+      background-size: 40px;
+}
+.källaren {
+   position: absolute;
+   background-color: #f36979;
+   margin: auto;
+   width: 15%;
+   height: 15%;
    border: 5px solid rgb(255, 255, 255);
    padding: 10px;
    text-align: center;
    justify-content: center;
    left: 80%;
-   top: 50%;
-   transform: translate(-50%, -50%);
-   cursor: pointer;
-   opacity: 0.85;
-   border-radius: 15px;
-}
-.källaren {
-   position: absolute;
-   background-color: rgb(245, 70, 70);
-   margin: auto;
-   width: 20%;
-   height: 5%;
-   border: 5px solid rgb(255, 255, 255);
-   padding: 10px;
-   text-align: center;
-   justify-content: center;
-   left: 70%;
    top: 85%;
    transform: translate(-50%, -50%);
    cursor: pointer;
    opacity: 0.85;
    border-radius: 15px;
+      background-image:url(https://cdn-icons-png.flaticon.com/512/3799/3799690.png);
+      background-size: 40px;
+      background-repeat: no-repeat;
+      
+
 }
 .kafeterian {
-   position: fixed;
-   background-color: rgb(245, 70, 70);
+   position: absolute;
+   background-color: #f36979;
    margin: auto;
-   width: 20%;
-   height: 5%;
+   width: 15%;
+   height: 15%;
    border: 5px solid rgb(255, 255, 255);
    padding: 10px;
    text-align: center;
    justify-content: center;
-   left: 20%;
+   left: 42%;
    top: 50%;
    transform: translate(-50%, -50%);
    cursor: pointer;
    opacity: 0.85;
    border-radius: 15px;
    z-index: 5;
+      background-image:url(https://cdn-icons-png.flaticon.com/512/3799/3799690.png);
+      background-size: 40px;
+      background-repeat: no-repeat;
+   
 }
 .lab_10 {
-   position: fixed;
-   background-color: rgb(245, 70, 70);
-   margin: auto;
-   width: 20%;
-   height: 5%;
-   border: 5px solid rgb(255, 255, 255);
-   padding: 10px;
-   text-align: center;
-   justify-content: center;
-   left: 30%;
-   top: 85%;
-   transform: translate(-50%, -50%);
-   cursor: pointer;
-   opacity: 0.85;
-   border-radius: 15px;
-   z-index: 5;
-}
-.översta_våningen {
    position: absolute;
-   background-color: rgb(245, 70, 70);
+   background-color: #f36979;
    margin: auto;
-   width: 20%;
-   height: 5%;
+   width: 15%;
+   height: 15%;
    border: 5px solid rgb(255, 255, 255);
    padding: 10px;
    text-align: center;
    justify-content: center;
    left: 50%;
+   top: 85%;
+   transform: translate(-50%, -50%);
+   cursor: pointer;
+   opacity: 0.85;
+   border-radius: 15px;
+   z-index: 5;
+      background-image: url(https://cdn-icons.flaticon.com/png/512/1291/premium/1291594.png?token=exp=1634738455~hmac=7bc7a3c5a741ed7e20bb829c60ddf576);
+      background-repeat: no-repeat;
+      background-size: 40px;
+}
+.översta_våningen {
+   position: absolute;
+   background-color: #f36979;
+   margin: auto;
+   width: 15%;
+   height: 15%;
+   border: 5px solid rgb(255, 255, 255);
+   padding: 10px;
+   text-align: center;
+   justify-content: center;
+   left: 65%;
    top: 15%;
    transform: translate(-50%, -50%);
    cursor: pointer;
    opacity: 0.85;
    border-radius: 15px;
+      background-image: url(https://cdn-icons-png.flaticon.com/512/116/116251.png);
+      background-repeat: no-repeat;
+      background-size: 40px;
+      background-position-y: center;
 }
 .genomsnitt_temp {
    position: absolute;
-   background-color: rgb(245, 70, 70);
+   background-color: #f36979;
    margin: auto;
    width: 250px;
    height: 250px;
-   border: 10px outset rgb(255, 255, 255);
+   border: 5px solid rgb(255, 255, 255);
    padding: 10;
    line-height:250px;
    text-align: center;
    justify-content: center;
-   left: 50%;
+   left: 65%;
    top: 50%;
    transform: translate(-50%, -50%);
    cursor: pointer;
    border-radius: 50%;
-   opacity: 0.85;
+   opacity: 0.9;
+      background-image: url(https://cdn-icons-png.flaticon.com/512/606/606795.png);
+      background-repeat: no-repeat;
+      background-size: 70px;
+      background-position-x: center;
+      
+      
 }
 
 .genomsnitt_temp:hover, .översta_våningen:hover, .lab_10:hover, .kafeterian:hover, .källaren:hover, .terrariet:hover {
@@ -124,8 +158,8 @@ body {
 
 .introduktion {
    position: absolute; 
-   background-color: rgb(45, 45, 45);
-   width: 25%;
+   background-color: rgb(21, 56, 95);
+   width: 350px;
    height: 100%;
    padding: 10px;
    left: 13%;
@@ -137,4 +171,8 @@ body {
    font-size: medium;
    z-index: 0; 
    color: rgb(240, 239, 239);
+   padding-left: 70px;
+   padding-top: 20px;
+   line-height: 1.5em;
 }
+
