@@ -167,11 +167,10 @@ line-height: 1em;
    transform: translate(-50%, -50%);
    cursor: pointer;
    opacity: 0.7;
-   border-radius: 15px;
    font-size: medium;
    z-index: 0; 
    color: rgb(240, 239, 239);
-   padding-left: 70px;
+   padding-left: 30px;
    padding-top: 20px;
    line-height: 1.5em;
 }
