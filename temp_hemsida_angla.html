@@ -18,7 +18,7 @@
   <div>
     <div>
       <button class="kafeterian" type="button" class="btn btn-primary" data-bs-toggle="modal"
-        data-bs-target="#kafeterianModal">kafeterian</button>
+        data-bs-target="#kafeterianModal">Kafeterian</button>
       <!-- Modal -->
       <div class="modal fade" id="kafeterianModal" tabindex="-1" aria-labelledby="kafeterianModalLabel"
         aria-hidden="true">
@@ -78,8 +78,7 @@
   </div>
 
   <button class="källaren" type="button" class="btn btn-primary" data-bs-toggle="modal"
-    data-bs-target="#källaren">källaren
-  </button>
+    data-bs-target="#källaren">Källaren</button>
   <div class="modal fade" id="källarenModal" tabindex="-1" aria-labelledby="källarenModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -90,26 +89,26 @@
         </div>
       </div>
       <div class="modal-body" style="color:black">
-        <div id="källaren_10"></div>
+        <div id="källaren"></div>
       </div>
     </div>
   </div>
   </div>
   </div>
-  </div>
+
 
   <body>
     <div>
       <div>
         <button class="översta_våningen" type="button" class="btn btn-primary" data-bs-toggle="modal"
-          data-bs-target="#översta_våningenModal">översta_våningen</button>
+          data-bs-target="#översta_våningenModal">Översta våningen</button>
         <!-- Modal -->
         <div class="modal fade" id="översta_våningenModal" tabindex="-1" aria-labelledby="översta_våningenModalLabel"
           aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="översta_våningenModalLabel" style="color:black">översta_våningen
+                <h5 class="modal-title" id="översta_våningenModalLabel" style="color:black">Översta våningen
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
@@ -122,20 +121,21 @@
       </div>
     </div>
 
-    <button class="genomsnittliga_temperaturer" type="button" class="btn btn-primary" data-bs-toggle="modal"
-      data-bs-target="#genomsnittliga_temperaturModal">Terrar</button>
+    <button class="genomsnitt_temp" type="button" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#genomsnitt_tempModal">Genomsnitt</button>
     <!-- Modal -->
-    <div class="modal fade" id="terrarietModal" tabindex="-1" aria-labelledby="terrarietModalLabel" aria-hidden="true">
+    <div class="modal fade" id="genomsnitt_tempModal" tabindex="-1" aria-labelledby="genomsnitt_tempModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="terrarietModalLabel" style="color:black">Terrariet
+            <h5 class="modal-title" id="genomsnitt_tempModalLabel" style="color:black"> Genomsnitt
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
         </div>
         <div class="modal-body" style="color:black">
-          <div id="chart_terrariet"></div>
+          <div id="chart_genomsnitt_temp"></div>
         </div>
       </div>
     </div>
@@ -187,7 +187,7 @@
         var chartlab_10 = new google.visualization.LineChart(document.getElementById('chart_lab_10'));
         chartlab_10.draw(data, options);
 
-        var chartkällaren = new google.visualization.LineChart(document.getElementById('chartkällaren'));
+        var chartkällaren = new google.visualization.LineChart(document.getElementById('chart_källaren'));
         chartkällaren.draw(data, options);
 
         // Instantiate and draw our chart, passing in some options.
@@ -195,8 +195,8 @@
         chartöversta_våningen.draw(data, options);
 
         // Instantiate and draw our chart, passing in some options.
-        var chartgenomsnittliga_temperatur = new google.visualization.LineChart(document.getElementById('chartgenomsnittliga_temperatur'));
-        chartgenomsnittliga_temperatur.draw(data, options);
+        var chartgenomsnitt_temp = new google.visualization.LineChart(document.getElementById('chart_genomsnitt_temp'));
+        chartgenomsnitt_temp.draw(data, options);
       }
     </script>
   </body>
