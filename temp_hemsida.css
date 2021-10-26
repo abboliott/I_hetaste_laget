@@ -25,7 +25,7 @@ padding: 1em;
 line-height: 1em;
 }
 
-.terrariet {
+.lab_ett {
    position: absolute;
    background-color: #f36979;
    margin: auto;
@@ -156,7 +156,7 @@ line-height: 1em;
       
 }
 
-.genomsnitt_temp:hover, .översta_våningen:hover, .lab_10:hover, .kafeterian:hover, .källaren:hover, .terrariet:hover {
+.genomsnitt_temp:hover, .översta_våningen:hover, .lab_10:hover, .kafeterian:hover, .källaren:hover, .lab_ett:hover {
    opacity: 1.0;
 }
 
@@ -169,7 +169,7 @@ line-height: 1em;
    left: 13%;
    top: 50%;
    transform: translate(-50%, -50%);
-   cursor: pointer;
+   cursor: default;
    opacity: 0.7;
    font-size: medium;
    z-index: 0; 
@@ -179,3 +179,15 @@ line-height: 1em;
    line-height: 1.5em;
 }
 
+.logga {   
+   position: absolute;
+   background-image:url(https://media-exp1.licdn.com/dms/image/C4E0BAQEEVD48KhCn2w/company-logo_200_200/0/1631012471346?e=2159024400&v=beta&t=1DT1iNF3DVh5AlVU2KSRqInMtkK_71_kGzJfoL-klK4);
+   height: 100px;
+   width: 100px; 
+   left: 92.2%; 
+   z-index: 15;
+   background-size: 100px;
+   border-bottom-left-radius: 30%;
+   border-left: 5px solid rgba(14,97,151, 255);
+   border-bottom: 5px solid rgba(14,97,151, 255);
+}
