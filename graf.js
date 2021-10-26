@@ -1,16 +1,22 @@
-let hum
-let temp
-// var terrarietTempRef = firebase.database().ref('/Terrariet/Temperature')
-// terrarietTempRef.on('value', (snapshot) => {
-//     const data = snapshot.val()
+let table = {}
 
-window.onload = test()
-window.onload = function funLoad () {
-    console.log('The Script will load now.')
-    getTemp()
-    getHum()
-    terrarietHumRef2()
-}
+
+
+var firebase_get_value = firebase.database().ref('/')
+firebase_get_value.on('value', (snapshot) => {
+    let data = snapshot.val()
+    if (data != null) {
+        console.log(temp)
+        data = data.map(Number)
+        temp = data
+        console.log(data)
+        chart.data.datasets[0].data = temp
+        chart.update()
+        table = data
+    }
+})
+
+
 
 
 function updateChart (array) {
@@ -21,18 +27,7 @@ function updateChart (array) {
     }
 }
 function getTemp () {
-    var terrarietTempRef2 = firebase.database().ref('/Klassrummet/Temperature')
-    terrarietTempRef2.on('value', (snapshot) => {
-        let data = snapshot.val()
-        if (data != null) {
-            console.log(temp)
-            data = data.map(Number)
-            temp = data
-            console.log(temp)
-            chart.data.datasets[0].data = temp
-            chart.update()
-        }
-    })
+
 }
 
 var xValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
@@ -138,4 +133,3 @@ function getTemp () {
     })
 }
 
-console.log("hello")
