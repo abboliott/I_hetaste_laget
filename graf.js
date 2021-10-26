@@ -1,53 +1,32 @@
 let table = {
-    "nu": {
-        "Hum": 42.5,
-        "Temp": 22.5
-    },
-    "previous": {
-        "Hum": {
-            "-MmvOMAlJTO-QKjRqACw": 42,
-            "-MmvOsElVy8VzuEYlbJV": 41.200000763,
-            "-MmvVpDAXhQ8uV7ThGOn": 41.5,
-            "-MmvbmA7Qj8RgUdWWcHU": 42.400001526
-        },
-        "Temp": {
-            "-MmvOM82P-B-f7chE43n": 21.100000381,
-            "-MmvOsC77Y-WjA9n8bu8": 21.200000763,
-            "-MmvVpAUQk_cZ3bYOmpi": 22.899999619,
-            "-Mmvbm7XGO8eJi6dsNLQ": 22.399999619
-        },
-        "Time": {
-            "-MmvOMDJCWBnv-8V5Q2T": 1635231560596,
-            "-MmvOsHQSPdXs6vSTEly": 1635231696027,
-            "-MmvVpG6vzYMyXCUOljE": 1635233518663,
-            "-MmvbmCfClV5nl3NAE-B": 1635235341163
-        }
+
+}
 
 
 
 var firebase_get_value = firebase.database().ref('/')
 firebase_get_value.on('value', (snapshot) => {
-            let data = snapshot.val()
-            if (data != null) {
-                console.log(temp)
-                data = data.map(Number)
-                temp = data
-                console.log(data)
-                chart.data.datasets[0].data = temp
-                chart.update()
-                table = data
-            }
-        })
+    let data = snapshot.val()
+    if (data != null) {
+        console.log(temp)
+        data = data.map(Number)
+        temp = data
+        console.log(data)
+        chart.data.datasets[0].data = temp
+        chart.update()
+        table = data
+    }
+})
 
 
 
 
-function updateChart(array) {
-        for (let i = 0; i < array.length; i++) {
-    chart.data.datasets[0].data[i] = array[0][i]
-    chart.data.datasets[1].data[i] = array[1][i]
-    chart.data.datasets[2].data[i] = array[2][i]
-}
+function updateChart (array) {
+    for (let i = 0; i < array.length; i++) {
+        chart.data.datasets[0].data[i] = array[0][i]
+        chart.data.datasets[1].data[i] = array[1][i]
+        chart.data.datasets[2].data[i] = array[2][i]
+    }
 }
 function getTemp () {
     HEAD
