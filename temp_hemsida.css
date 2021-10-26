@@ -192,3 +192,7 @@ line-height: 1em;
    border-left: 5px solid rgba(14,97,151, 255);
    border-bottom: 5px solid rgba(14,97,151, 255);
 }
+
+.graf-div{
+   background-color: white;
+}
