@@ -1,0 +1,38 @@
+
+  // // Load the Visualization API and the corechart package.
+  // google.charts.load('current', { 'packages': ['corechart'] });
+
+  // // Set a callback to run when the Google Visualization API is loaded.
+  // google.charts.setOnLoadCallback(drawChart);
+
+  // Callback that creates and populates a data table,
+  // instantiates the line chart, passes in the data and
+  // draws it.
+  // function drawChart() {
+
+  // // Create the data table.
+  // var data = new google.visualization.DataTable();
+  // data.addColumn('string', 'kafeterian');
+  // data.addColumn('number', 'temp');
+
+  // let tider = ["10", "11", "12", "13"]
+  // let temp = [12, 14, 15, 16]
+  // let hum = [45, 46, 65, 45]
+  // let together = []
+  // let togetherhum = []
+  // for (let i = 0; i < tider.length; i++) { // together.push([tider[i], temp[i]]); // togetherhum.push([tider[i],
+    hum[i]]); // } // let faketempArray=[['10:00', 3], ['11.20', 1], ['kafeterian', 5], ['kafeterian', 3]] //
+    data.addRows( // // faketempArray // together, togetherhum // [ // // ['kafeterian', 3], // ] ); // Set chart
+    options // var options={ // 'title' : 'Temp (celsius)' , // 'width' : 400, // 'height' : 300 // }; // Instantiate
+    and draw our chart, passing in some options. //var chartKafeterian=new
+    google.visualization.LineChart(document.getElementById('chart_kafeterian')); //chartKafeterian.draw(data, options);
+    // Instantiate and draw our chart, passing in some options. // var chartTerrariet=new
+    google.visualization.LineChart(document.getElementById('chart_terrariet')); // chartTerrariet.draw(data, options);
+    // var chartlab_10=new google.visualization.LineChart(document.getElementById('chart_lab_10')); //
+    chartlab_10.draw(data, options); // var chartKällaren=new
+    google.visualization.LineChart(document.getElementById('chart_källaren')); // chartKällaren.draw(data, options); //
+    // Instantiate and draw our chart, passing in some options. // var chartÖversta_våningen=new
+    google.visualization.LineChart(document.getElementById('chart_översta_våningen')); //
+    chartÖversta_våningen.draw(data, options); // // Instantiate and draw our chart, passing in some options. // var
+    chartGenomsnitt_temp=new google.visualization.LineChart(document.getElementById('chart_genomsnitt_temp')); //
+    chartGenomsnitt_temp.draw(data, options); // } //
