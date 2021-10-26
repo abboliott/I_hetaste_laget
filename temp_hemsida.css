@@ -25,7 +25,7 @@ padding: 1em;
 line-height: 1em;
 }
 
-.terrariet {
+.lab_ett {
    position: absolute;
    background-color: #f36979;
    margin: auto;
@@ -156,7 +156,7 @@ line-height: 1em;
       
 }
 
-.genomsnitt_temp:hover, .översta_våningen:hover, .lab_10:hover, .kafeterian:hover, .källaren:hover, .terrariet:hover {
+.genomsnitt_temp:hover, .översta_våningen:hover, .lab_10:hover, .kafeterian:hover, .källaren:hover, .lab_ett:hover {
    opacity: 1.0;
 }
 

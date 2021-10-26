@@ -21,8 +21,8 @@ function updateChart (array) {
     }
 }
 function getTemp () {
-    var terrarietTempRef2 = firebase.database().ref('/Klassrummet/Temperature')
-    terrarietTempRef2.on('value', (snapshot) => {
+    var Lab_ettTempRef2 = firebase.database().ref('/Klassrummet/Temperature')
+    Lab_ettTempRef2.on('value', (snapshot) => {
         let data = snapshot.val()
         if (data != null) {
             console.log(temp)
@@ -35,8 +35,8 @@ function getTemp () {
     })
 }
 function getHum () {
-    var terrarietHumRef2 = firebase.database().ref('/Klassrummet/Humidity')
-    terrarietHumRef2.on('value', (snapshot) => {
+    var Lab_ettHumRef2 = firebase.database().ref('/Klassrummet/Humidity')
+    Lab_ettHumRef2.on('value', (snapshot) => {
         let data = snapshot.val()
         if (data != null) {
             console.log(hum)
