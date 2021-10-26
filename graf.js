@@ -139,15 +139,13 @@ firebase.database().ref('/EntreplanPT/previous').on('value', (snapshot) => {
 
 let KafeterianTemp = document.getElementById("KafeterianTemp")
 
-}
 
 
 
 
 
 
-
-function kafeterian_button {
+function kafeterian_button () {
     Document.getElementByClass("kafeterian").innerHTML = firebase.database().ref('/kafeterian/previous').on('value', (snapshot) => {
         let data = snapshot.val()
         if (data != null) {
