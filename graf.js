@@ -148,7 +148,13 @@ let KafeterianTemp = document.getElementById("KafeterianTemp")
 
 
 function kafeterian_button {
-    Document.getElementByClass("kafeterian").innerHTML
+    Document.getElementByClass("kafeterian").innerHTML = firebase.database().ref('/kafeterian/previous').on('value', (snapshot) => {
+        let data = snapshot.val()
+        if (data != null) {
+            console.log("Update chart")
+            updateChartData(chart_översta_våningen, data)
+        }
+    })
 
 
 }
