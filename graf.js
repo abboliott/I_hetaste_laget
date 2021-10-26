@@ -3,13 +3,13 @@ let temp
 // var terrarietTempRef = firebase.database().ref('/Terrariet/Temperature')
 // terrarietTempRef.on('value', (snapshot) => {
 //     const data = snapshot.val()
-// })
-// window.onload = test()
+
+window.onload = test()
 window.onload = function funLoad () {
     console.log('The Script will load now.')
     getTemp()
     getHum()
-    // terrarietHumRef2()
+    terrarietHumRef2()
 }
 
 
@@ -34,28 +34,10 @@ function getTemp () {
         }
     })
 }
-function getHum () {
-    var terrarietHumRef2 = firebase.database().ref('/Klassrummet/Humidity')
-    terrarietHumRef2.on('value', (snapshot) => {
-        let data = snapshot.val()
-        if (data != null) {
-            console.log(hum)
-            data = data.map(Number)
-            hum = datahum
-            console.log(hum)
-            chart.data.datasets[0].data = hum
-            chart.update()
-        }
-    })
-}
-
-
-
-
 
 var xValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 
-let chart = new Chart("chart_kafeterian", {
+let chart_kafeterian = new Chart("chart_kafeterian", {
     type: "line",
     data: {
         labels: xValues,
@@ -68,11 +50,7 @@ let chart = new Chart("chart_kafeterian", {
             borderColor: "green",
             fill: false
         }
-            // , {
-            //     data: [30, 70, 200, 500, 600, 400, 200, 100, 200, 100],
-            //     borderColor: "blue",
-            //     fill: false
-            // }
+
         ]
     },
 
@@ -109,9 +87,6 @@ let chart = new Chart("chart_kafeterian", {
     }
 })
 
-
-
-
 var xValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 
 let cart2 = new Chart("myChart2", {
@@ -136,3 +111,31 @@ let cart2 = new Chart("myChart2", {
         legend: { display: false }
     }
 })
+
+function getTemp () {
+
+    var terrarietTempRef2 = firebase.database().ref('/Klassrummet/Temperature')
+
+    terrarietTempRef2.on('value', (snapshot) => {
+
+        let data = snapshot.val()
+
+        if (data != null) {
+
+            console.log(temp)
+
+            data = data.map(Number)
+
+            temp = data
+
+            console.log(temp)
+
+            chart.data.datasets[0].data = temp
+
+            chart.update()
+
+        }
+    })
+}
+
+console.log("hello")
