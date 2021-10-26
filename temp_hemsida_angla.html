@@ -24,6 +24,8 @@
 
 <body>
 
+  <canvas id="chart_kafeterian" style="width:100%;max-width:600px"></canvas>
+
   <button class="kafeterian" type="button" class="btn btn-primary" data-bs-toggle="modal"
     data-bs-target="#kafeterianModal">Kafeterian <br> <span> 0°C 10%</span>
   </button>
@@ -172,25 +174,101 @@
 
     firebase.initializeApp(firebaseConfig);
 
+
+
     google.charts.load('current', { 'packages': ['corechart'] });
     google.charts.setOnLoadCallback(drawkafeterian);
 
     var options = { 'title ': 'Temp (celsius)', 'width': 400, 'height': 300 }
 
-    function drawkafeterian() {
-      var data_kafeterian = google.visualization.arrayToDataTable([
-        ['Temp + hum', 'Per h'],
-        ['hour 1', 8],
-        ['hour 2', 2],
-        ['hour 3', 4],
-        ['hour 4', 5],
-        ['hour 5', 2]
+      < script >
+var xValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 
-      ])
-    }
+    let chart = new Chart("chart_kafeterian", {
 
-    var chart_kafeterian = new google.visualization.LineChart(document.getElementById('chart_kafeterian'));
-    chart_kafeterian.draw(data, options);
+      type: "line",
+
+      data: {
+
+        labels: xValues,
+
+        datasets: [{
+
+          data: temp,
+
+          borderColor: "red",
+
+          fill: false
+
+        }, {
+
+          data: hum,
+
+          borderColor: "green",
+
+          fill: false
+
+        }
+
+        ]
+
+      },
+
+
+
+      options: {
+
+        responsive: true,
+
+        legend: {
+
+          position: 'bottom',
+
+        },
+
+        hover: {
+
+          mode: 'label'
+
+        },
+
+        scales: {
+
+          xAxes: [{
+
+            display: true,
+
+            scaleLabel: {
+
+              display: true,
+
+              labelString: 'Tid'
+
+            }
+
+          }],
+
+          yAxes: [{
+
+            display: true,
+
+            ticks: {
+
+              beginAtZero: true,
+
+              steps: 10,
+
+              stepValue: 5,
+
+              max: 50
+
+            }
+
+          }]
+
+        },
+
+
 
   </script>
 
