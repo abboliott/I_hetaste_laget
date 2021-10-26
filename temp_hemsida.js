@@ -1,9 +1,16 @@
 
-import { } from 'https://www.gstatic.com/charts/loader.js'
+//import { } from 'https://www.gstatic.com/charts/loader.js'
+//type = "text/javascript" >
+google.charts.load('current', { packages: ['corechart'] })
+google.charts.setOnLoadCallback(drawChart)
+
+//$response -> headers -> set('Acces-Control-Allow-Origin', https://www.gstatic.com/charts/loader.js );
 
 
-// const cors = require('cors')({ origin: true })
-// Acces - Constrol - Allow - Orgin,*
+
+
+// const cors = require('cors')({origin: true })
+
 
 
 //const cors = require('cors')
@@ -20,10 +27,10 @@ import { } from 'https://www.gstatic.com/charts/loader.js'
 //     console.log(temp_hum.val().firstname));
 //}
 
-function get_temp_hum () {
-    let myCheckBox = document.getElementById("checkbox")
+// function get_temp_hum () {
+//     let myCheckBox = document.getElementById("checkbox")
 
-}
+// }
 
 
 function drawChart () {
@@ -37,49 +44,49 @@ function drawChart () {
         ['hum']
     ])
 
-    // let tider = ["10", "11", "12", "13"]
-    // let temp = [12, 14, 15, 16]
-    // let hum = [45, 46, 65, 45]
-    // let together = []
-    // let togetherhum = []
-    // for (let i = 0; i < tider.length; i++) {
-    //     together.push([tider[i], temp[i]])
-    //     togetherhum.push([tider[i], hum[i]])
+    let tider = ["10", "11", "12", "13"]
+    let temp = [12, 14, 15, 16]
+    let hum = [45, 46, 65, 45]
+    let together = []
+    let togetherhum = []
+    for (let i = 0; i < tider.length; i++) {
+        together.push([tider[i], temp[i]])
+        togetherhum.push([tider[i], hum[i]])
 
-    // }
-    // let faketempArray = [['10:00', 3], ['11.20', 1], ['kafeterian', 5], ['kafeterian', 3]]
+        // }
+        // let faketempArray = [['10:00', 3], ['11.20', 1], ['kafeterian', 5], ['kafeterian', 3]]
 
-    var chartKafeterian = new google.visualization.LineChart(document.getElementById('chart_kafeterian'))
-    chartKafeterian.draw(data, options)
+        var chartKafeterian = new google.visualization.LineChart(document.getElementById('chart_kafeterian'))
+        chartKafeterian.draw(data, options)
 
 
-}
+    }
 
-var options = { 'title': 'Temp (celsius)', 'width': 400, 'height': 300 }
+    var options = { 'title': 'Temp (celsius)', 'width': 400, 'height': 300 }
 
-// Instantiate and draw our chart, passing in some options.
-//var chartKafeterian = new google.visualization.LineChart(document.getElementById('chart_kafeterian'));
-//chartKafeterian.draw(data, options);
+    // Instantiate and draw our chart, passing in some options.
+    //var chartKafeterian = new google.visualization.LineChart(document.getElementById('chart_kafeterian'));
+    //chartKafeterian.draw(data, options);
 
-google.charts.load('current', { 'packages': ['corechart'] })
-google.charts.setOnLoadCallback(drawChart)
+    google.charts.load('current', { 'packages': ['corechart'] })
+    google.charts.setOnLoadCallback(drawChart)
 
-var chartGenomsnitt_temp = new google.visualization.LineChart(document.getElementById('chart_genomsnitt_temp'))
-chartGenomsnitt_temp.draw(data, options)
+    var chartGenomsnitt_temp = new google.visualization.LineChart(document.getElementById('chart_genomsnitt_temp'))
+    chartGenomsnitt_temp.draw(data, options)
 
-// Instantiate and draw our chart, passing in some options.
-var chartterrariet = new google.visualization.LineChart(document.getElementById('chart_Terrariet'))
-chartTerrariet.draw(data, options)
+    // Instantiate and draw our chart, passing in some options.
+    var chartterrariet = new google.visualization.LineChart(document.getElementById('chart_Terrariet'))
+    chartTerrariet.draw(data, options)
 
-var chartlab_10 = new google.visualization.LineChart(document.getElementById('chart_lab_10'))
-chartlab_10.draw(data, options)
+    var chartlab_10 = new google.visualization.LineChart(document.getElementById('chart_lab_10'))
+    chartlab_10.draw(data, options)
 
-var chartkällaren = new google.visualization.LineChart(document.getElementById('chart_källaren'))
-chartkällaren.draw(data, options)
+    var chartkällaren = new google.visualization.LineChart(document.getElementById('chart_källaren'))
+    chartkällaren.draw(data, options)
 
-// Instantiate and draw our chart, passing in some options.
-var chartÖversta_våningen = new google.visualization.LineChart(document.getElementById('chart_översta_våningen'))
-chartÖversta_våningen.draw(data, options)
+    // Instantiate and draw our chart, passing in some options.
+    var chartÖversta_våningen = new google.visualization.LineChart(document.getElementById('chart_översta_våningen'))
+    chartÖversta_våningen.draw(data, options)
 
 
 

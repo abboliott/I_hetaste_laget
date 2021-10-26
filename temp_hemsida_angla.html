@@ -11,6 +11,13 @@
 
   <!--Load the AJAX API-->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+
+
+
+
+
 
 
 </head>
@@ -151,115 +158,63 @@
       Till höger om temperaturen syns även luftfuktigheten i procent.
     </p>
   </div>
+  <script type="text/javascript">
+
+    var firebaseConfig = {
+      apikey: "",
+      authDomain: "",
+      databaseURL: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: "",
+      appId: ""
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawkafeterian);
+
+    var options = { 'title ': 'Temp (celsius)', 'width': 400, 'height': 300 }
+
+    function drawkafeterian() {
+      var data_kafeterian = google.visualization.arrayToDataTable([
+        ['Temp + hum', 'Per h'],
+        ['hour 1', 8],
+        ['hour 2', 2],
+        ['hour 3', 4],
+        ['hour 4', 5],
+        ['hour 5', 2]
+
+      ])
+    }
+
+    var chart_kafeterian = new google.visualization.LineChart(document.getElementById('chart_kafeterian'));
+    chart_kafeterian.draw(data, options);
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <script type="module" src="temp_hemsida.js">
-
-
-  </script>
-  <script type="module">
-
-    import { } from 'https://www.gstatic.com/charts/loader.js'
-    const cors = require('cors')({ origin: true })
-
-
-    //const cors = require('cors')
+  <!-- <script type="text/javascript" src="temp_hemsida.js"></script> -->
 
 
 
-
-
-
-    // let database = firebase.database()
-
-    // let person = database.ref("/person").once("value").then(function (temp_hum))
-    // {
-    //     console.log(temp_hum.val().firstname));
-    //}
-
-
-
-
-
-
-
-
-
-    // var chartGenomsnitt_temp = new google.visualization.LineChart(document.getElementById('chart_genomsnitt_temp'))
-    // chartGenomsnitt_temp.draw(data, options)
-
-    // let database = firebase.database()
-
-    // let person = database.ref("/person").once("value").then(function (temp_hum) {
-    //   console.log(temp_hum.val().firstname);
-    // });
-
-    // function get_temp_hum() {
-    //   let myCheckBox = document.getElementById("checkbox")
-
-    // }
-
-
-    // function drawChart() {
-
-    //   // Create the data table.
-    //   var data = new google.visualization.DataTable()
-    //   data.addColumn('string', 'kafeterian')
-    //   data.addColumn('number', 'temp')
-
-    //   let tider = ["10", "11", "12", "13"]
-    //   let temp = [12, 14, 15, 16]
-    //   let hum = [45, 46, 65, 45]
-    //   let together = []
-    //   let togetherhum = []
-    //   for (let i = 0; i < tider.length; i++) {
-    //     together.push([tider[i], temp[i]])
-    //     togetherhum.push([tider[i], hum[i]])
-
-    //   }
-    //   let faketempArray = [['10:00', 3], ['11.20', 1], ['kafeterian', 5], ['kafeterian', 3]]
-
-    //   var chartKafeterian = new google.visualization.LineChart(document.getElementById('chart_kafeterian'))
-    //   chartKafeterian.draw(data, options)
-
-    // }
-
-
-    // var options =
-    //   'title': 'Temp (celsius)',
-    //     'width': 400,
-    //       'height': 300;
-
-    // // Instantiate and draw our chart, passing in some options.
-    // //var chartKafeterian = new google.visualization.LineChart(document.getElementById('chart_kafeterian'));
-    // //chartKafeterian.draw(data, options);
-
-    // google.charts.load('current', { 'packages': ['corechart'] })
-    // google.charts.setOnLoadCallback(drawChart)
-
-    // // Instantiate and draw our chart, passing in some options.
-    // var chartTerrariet = new google.visualization.LineChart(document.getElementById('chart_terrariet'))
-    // chartTerrariet.draw(data, options)
-
-    // var chartlab_10 = new google.visualization.LineChart(document.getElementById('chart_lab_10'))
-    // chartlab_10.draw(data, options)
-
-    // var chartKällaren = new google.visualization.LineChart(document.getElementById('chart_källaren'))
-    // chartKällaren.draw(data, options)
-
-    // // Instantiate and draw our chart, passing in some options.
-    // var chartÖversta_våningen = new google.visualization.LineChart(document.getElementById('chart_översta_våningen'))
-    // chartÖversta_våningen.draw(data, options)
-
-
-
-
-
-
-  </script>
 
 
 </body>
