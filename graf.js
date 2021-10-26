@@ -44,16 +44,72 @@ let chart_kafeterian = new Chart(document.getElementById('myChart'), {
                     beginAtZero: true,
                     steps: 10,
                     stepValue: 5,
-                    max: 50
+                    max: 80
                 }
             }]
         },
         title: {
             display: true,
-            text: 'Temperatur'
+            text: 'Temp/Hum'
         }
     }
 })
+
+let chart_översta_våningen = new Chart(document.getElementById('översta_våningen'), {
+    type: "line",
+    data: {
+        labels: xValues,
+        datasets: [{
+            label: 'temp',
+            data: yValues,
+            borderColor: "red",
+            backgroundColor: "red",
+            fill: false
+        }, {
+            label: 'hum',
+            data: [1],
+            borderColor: "green",
+            backgroundColor: "green",
+            fill: false
+        }
+
+        ]
+    },
+
+    options: {
+        responsive: true,
+        legend: {
+            position: 'bottom',
+        },
+        hover: {
+            mode: 'label'
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Tid'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    beginAtZero: true,
+                    steps: 10,
+                    stepValue: 5,
+                    max: 80
+                }
+            }]
+        },
+        title: {
+            display: true,
+            text: 'Temp/Hum'
+        }
+    }
+})
+
+
 
 function updateChartData (chart, data) {
 
@@ -72,3 +128,27 @@ firebase.database().ref('/Cafeterian/previous').on('value', (snapshot) => {
         updateChartData(chart_kafeterian, data)
     }
 })
+
+firebase.database().ref('/EntreplanPT/previous').on('value', (snapshot) => {
+    let data = snapshot.val()
+    if (data != null) {
+        console.log("Update chart")
+        updateChartData(chart_översta_våningen, data)
+    }
+})
+
+let KafeterianTemp = document.getElementById("KafeterianTemp")
+
+}
+
+
+
+
+
+
+
+function kafeterian_button {
+    Document.getElementByClass("kafeterian").innerHTML
+
+
+}

@@ -40,7 +40,8 @@
   <div>
     <div>
       <button class="kafeterian" type="button" class="btn btn-primary" data-bs-toggle="modal"
-        data-bs-target="#kafeterianModal">Kafeterian <br> <span> 0°C 10%</span> </button>
+        data-bs-target="#kafeterianModal">Kafeterian <br> <span id="KafeterianTemp"> 0°C </span><span
+          id="KafeterianHum">10%</span> </button>
       <!-- Modal -->
       <div class="modal fade" id="kafeterianModal" tabindex="-1" aria-labelledby="kafeterianModalLabel"
         aria-hidden="true">
@@ -143,8 +144,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
             </div>
-            <div class="modal-body" style="color:black">
-              <div id="chart_översta_våningen"></div>
+            <div class="graf-översta_våningen" style="color:white">
+              <canvas id="översta_våningen" style="width:100%;max-width:700px"></canvas>
             </div>
           </div>
         </div>
