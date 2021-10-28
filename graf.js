@@ -140,7 +140,7 @@ firebase.database().ref('/EntreplanPT/previous').on('value', (snapshot) => {
 firebase.database().ref('/Cafeterian/nu/Temp').on('value', (snapshot) => {
     let visaTempkaf = snapshot.val()
     var nyTempkaf = document.getElementById("KafeterianTemp")
-    nyTempkaf.innerHTML = Math.round(visaTempkaf * 10) / 10 + "ºC"
+    nyTempkaf.innerHTML = Math.round(visaTempkaf * 10) / 10 + "ºC "
 })
 
 firebase.database().ref('/Cafeterian/nu/Hum').on('value', (snapshot) => {
@@ -152,7 +152,7 @@ firebase.database().ref('/Cafeterian/nu/Hum').on('value', (snapshot) => {
 firebase.database().ref('/EntreplanPT/nu/Temp').on('value', (snapshot) => {
     let visaTempEnt = snapshot.val()
     var nyTempEnt = document.getElementById("EntreplanPTTemp")
-    nyTempEnt.innerHTML = Math.round(visaTempEnt * 10) / 10 + "ºC"
+    nyTempEnt.innerHTML = Math.round(visaTempEnt * 10) / 10 + "ºC "
 })
 
 firebase.database().ref('/EntreplanPT/nu/Hum').on('value', (snapshot) => {
@@ -164,7 +164,7 @@ firebase.database().ref('/EntreplanPT/nu/Hum').on('value', (snapshot) => {
 firebase.database().ref('/Lab-10/nu/Temp').on('value', (snapshot) => {
     let visaTempLab10 = snapshot.val()
     var nyTempLab10 = document.getElementById("Lab10Temp")
-    nyTempLab10.innerHTML = Math.round(visaTempLab10 * 10) / 10 + "ºC"
+    nyTempLab10.innerHTML = Math.round(visaTempLab10 * 10) / 10 + "ºC "
 })
 
 firebase.database().ref('/Lab-10/nu/Hum').on('value', (snapshot) => {
@@ -176,7 +176,7 @@ firebase.database().ref('/Lab-10/nu/Hum').on('value', (snapshot) => {
 firebase.database().ref('/Lab-ett/nu/Temp').on('value', (snapshot) => {
     let visaTempLabEtt = snapshot.val()
     var nyTempLabEtt = document.getElementById("LabEttTemp")
-    nyTempLabEtt.innerHTML = Math.round(visaTempLabEtt * 10) / 10 + "ºC"
+    nyTempLabEtt.innerHTML = Math.round(visaTempLabEtt * 10) / 10 + "ºC "
 })
 
 firebase.database().ref('/Lab-ett/nu/Hum').on('value', (snapshot) => {
@@ -188,7 +188,7 @@ firebase.database().ref('/Lab-ett/nu/Hum').on('value', (snapshot) => {
 firebase.database().ref('/Kallaren/nu/Temp').on('value', (snapshot) => {
     let visaTempKal = snapshot.val()
     var nyTempKal = document.getElementById("KallarenTemp")
-    nyTempKal.innerHTML = Math.round(visaTempKal * 10) / 10 + "ºC"
+    nyTempKal.innerHTML = Math.round(visaTempKal * 10) / 10 + "ºC "
 })
 
 firebase.database().ref('/Kallaren/nu/Hum').on('value', (snapshot) => {
