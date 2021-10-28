@@ -195,7 +195,7 @@ firebase.database().ref('/Kallaren/nu/Hum').on('value', (snapshot) => {
     let visaHumKal = snapshot.val()
     var nyHumKal = document.getElementById("KallarenHum")
     nyHumKal.innerHTML = Math.round(visaHumKal * 10) / 10 + "%"
-})
+}
 
 // firebase.database().ref('/Cafeterian/nu/Hum').on('value', (snapshot) => {
 //     let genomsnittHum = (visaHumKaf + visaHumEnt) / 2
@@ -206,10 +206,4 @@ firebase.database().ref('/Kallaren/nu/Hum').on('value', (snapshot) => {
 
 
 
-})
-
-
-
-
-
-
+)
