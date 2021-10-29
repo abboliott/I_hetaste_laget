@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>I hetaste laget</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="temp_hemsida.css">
@@ -40,7 +40,7 @@
   <div>
     <div>
       <button class="kafeterian" type="button" class="btn btn-primary" data-bs-toggle="modal"
-        data-bs-target="#kafeterianModal">Kafeterian <br> <span id="KafeterianTemp"> 0°C </span><span
+        data-bs-target="#kafeterianModal">Kafeterian <br> <span id="KafeterianTemp"> 0°C </span> <span
           id="KafeterianHum">10%</span> </button>
       <!-- Modal -->
       <div class="modal fade" id="kafeterianModal" tabindex="-1" aria-labelledby="kafeterianModalLabel"
@@ -65,7 +65,8 @@
   </div>
 
   <button class="lab_ett" type="button" class="btn btn-primary" data-bs-toggle="modal"
-    data-bs-target="#lab_ettModal">Lab ett <br> <span> 0°C 10%</span> </button>
+    data-bs-target="#lab_ettModal">Lab ett <br> <span id="LabEttTemp">0°C</span> <span id="LabEttHum">10%</span>
+  </button>
   <!-- Modal -->
   <div class="modal fade" id="lab_ettModal" tabindex="-1" aria-labelledby="lab_ettModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -85,7 +86,7 @@
   </div>
 
   <button class="lab_10" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lab_10Modal">Lab
-    10 <br> <span> 0°C 10%</span> </button>
+    10 <br> <span id="Lab10Temp">0°C</span> <span id="Lab10Hum">10%</span> </button>
   <div class="modal fade" id="lab_10Modal" tabindex="-1" aria-labelledby="lab_10ModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -106,7 +107,8 @@
   <div>
     <div>
       <button class="källaren" type="button" class="btn btn-primary" data-bs-toggle="modal"
-        data-bs-target="#källarenModal">Källaren <br> <span> 0°C 10%</span> </button>
+        data-bs-target="#källarenModal">Källaren <br> <span id="KallarenTemp">0°C</span> <span
+          id="KallarenHum">10%</span> </button>
       <!-- Modal -->
       <div class="modal fade" id="källarenModal" tabindex="-1" aria-labelledby="källarenModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -132,7 +134,8 @@
     <div>
       <div>
         <button class="översta_våningen" type="button" class="btn btn-primary" data-bs-toggle="modal"
-          data-bs-target="#översta_våningenModal">Översta våningen <br> <span> 0°C 10%</span> </button>
+          data-bs-target="#översta_våningenModal">Översta våningen <br> <span id="EntreplanPTTemp">0°C</span> <br> <span
+            id="EntreplanPTHum">10%</span> </button>
         <!-- Modal -->
         <div class="modal fade" id="översta_våningenModal" tabindex="-1" aria-labelledby="översta_våningenModalLabel"
           aria-hidden="true">
@@ -155,7 +158,8 @@
 
     <button class="genomsnitt_temp" type="button" class="btn btn-primary" data-bs-toggle="modal"
       data-bs-target="#genomsnitt_tempModal">
-      <p class="genomsnitt_temp_temp">Temperaturen <br> i genomsnitt <br><br><span> 0°C 10%</span>
+      <p class="genomsnitt_temp_temp">Temperaturen <br> i genomsnitt <br><br><span id="averageTemp">0°C</span> <span
+          id="averageHum">10%</span>
     </button></p>
 
     <div class="modal fade" id="genomsnitt_tempModal" tabindex="-1" aria-labelledby="genomsnitt_tempModalLabel"
