@@ -229,7 +229,12 @@ firebase.database().ref('/EntreplanPT/previous').on('value', (snapshot) => {
         // console.log("Update chart")
         updateChartData(chart_översta_våningen, data)
     }
-})
+    HEAD
+}
+
+
+)
+
 
 
 
