@@ -19,6 +19,10 @@ body {
    line-height: 2em;
 }
 
+.graf-källaren {
+   background-color: white;
+}
+
 .genomsnitt_temp_temp{
 margin: 1em;
 padding: 1em;

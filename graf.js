@@ -108,6 +108,60 @@ let chart_översta_våningen = new Chart(document.getElementById('översta_våni
         }
     }
 })
+let chart_Kallaren = new Chart(document.getElementById('Kallaren'), {
+    type: "line",
+    data: {
+        labels: xValues,
+        datasets: [{
+            label: 'temp',
+            data: yValues,
+            borderColor: "red",
+            backgroundColor: "red",
+            fill: false
+        }, {
+            label: 'hum',
+            data: [1],
+            borderColor: "green",
+            backgroundColor: "green",
+            fill: false
+        }
+
+        ]
+    },
+
+    options: {
+        responsive: true,
+        legend: {
+            position: 'bottom',
+        },
+        hover: {
+            mode: 'label'
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Tid'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    beginAtZero: true,
+                    steps: 10,
+                    stepValue: 5,
+                    max: 80
+                }
+            }]
+        },
+        title: {
+            display: true,
+            text: 'Temp/Hum'
+        }
+    }
+})
+
 
 let allTempValues = []
 let allHumValues = []
@@ -229,11 +283,16 @@ firebase.database().ref('/EntreplanPT/previous').on('value', (snapshot) => {
         // console.log("Update chart")
         updateChartData(chart_översta_våningen, data)
     }
-    HEAD
-}
-
-
-)
+    
+})
+firebase.database().ref('/Kallaren/previous').on('value', (snapshot) => {
+    let data = snapshot.val()
+    if (data != null) {
+        // console.log("Update chart")
+        updateChartData(chart_Kallaren, data)
+    }
+    
+})
 
 
 
