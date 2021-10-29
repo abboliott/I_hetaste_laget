@@ -229,7 +229,82 @@ firebase.database().ref('/EntreplanPT/previous').on('value', (snapshot) => {
         // console.log("Update chart")
         updateChartData(chart_översta_våningen, data)
     }
+    HEAD
 }
 
 
 )
+
+
+
+firebase.database().ref('/Cafeterian/nu/Temp').on('value', (snapshot) => {
+    let visaTempkaf = snapshot.val()
+    var nyTempkaf = document.getElementById("KafeterianTemp")
+    nyTempkaf.innerHTML = Math.round(visaTempkaf * 10) / 10 + "ºC "
+})
+
+firebase.database().ref('/Cafeterian/nu/Hum').on('value', (snapshot) => {
+    let visaHumKaf = snapshot.val()
+    var nyHumKaf = document.getElementById("KafeterianHum")
+    nyHumKaf.innerHTML = Math.round(visaHumKaf * 10) / 10 + "%"
+})
+
+firebase.database().ref('/EntreplanPT/nu/Temp').on('value', (snapshot) => {
+    let visaTempEnt = snapshot.val()
+    var nyTempEnt = document.getElementById("EntreplanPTTemp")
+    nyTempEnt.innerHTML = Math.round(visaTempEnt * 10) / 10 + "ºC "
+})
+
+firebase.database().ref('/EntreplanPT/nu/Hum').on('value', (snapshot) => {
+    let visaHumEnt = snapshot.val()
+    var nyHumEnt = document.getElementById("EntreplanPTHum")
+    nyHumEnt.innerHTML = Math.round(visaHumEnt * 10) / 10 + "%"
+})
+
+firebase.database().ref('/Lab-10/nu/Temp').on('value', (snapshot) => {
+    let visaTempLab10 = snapshot.val()
+    var nyTempLab10 = document.getElementById("Lab10Temp")
+    nyTempLab10.innerHTML = Math.round(visaTempLab10 * 10) / 10 + "ºC "
+})
+
+firebase.database().ref('/Lab-10/nu/Hum').on('value', (snapshot) => {
+    let visaHumLab10 = snapshot.val()
+    var nyHumLab10 = document.getElementById("Lab10Hum")
+    nyHumLab10.innerHTML = Math.round(visaHumLab10 * 10) / 10 + "%"
+})
+
+firebase.database().ref('/Lab-ett/nu/Temp').on('value', (snapshot) => {
+    let visaTempLabEtt = snapshot.val()
+    var nyTempLabEtt = document.getElementById("LabEttTemp")
+    nyTempLabEtt.innerHTML = Math.round(visaTempLabEtt * 10) / 10 + "ºC "
+})
+
+firebase.database().ref('/Lab-ett/nu/Hum').on('value', (snapshot) => {
+    let visaHumLabEtt = snapshot.val()
+    var nyHumLabEtt = document.getElementById("LabEttHum")
+    nyHumLabEtt.innerHTML = Math.round(visaHumLabEtt * 10) / 10 + "%"
+})
+
+firebase.database().ref('/Kallaren/nu/Temp').on('value', (snapshot) => {
+    let visaTempKal = snapshot.val()
+    var nyTempKal = document.getElementById("KallarenTemp")
+    nyTempKal.innerHTML = Math.round(visaTempKal * 10) / 10 + "ºC "
+})
+
+firebase.database().ref('/Kallaren/nu/Hum').on('value', (snapshot) => {
+    let visaHumKal = snapshot.val()
+    var nyHumKal = document.getElementById("KallarenHum")
+    nyHumKal.innerHTML = Math.round(visaHumKal * 10) / 10 + "%"
+}
+
+    // firebase.database().ref('/Cafeterian/nu/Hum').on('value', (snapshot) => {
+    //     let genomsnittHum = (visaHumKaf + visaHumEnt) / 2
+    //     var nyGenHum = document.getElementById("GenomsnittHum")
+    //     nyGenHum.innerHTML = genomsnittHum + "%"
+    //     print(visaHumKal)
+
+
+
+
+)
+
