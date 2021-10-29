@@ -56,6 +56,60 @@ let chart_lab_ett = new Chart(document.getElementById('lab_ett'), {
     }
 })
 
+let chart_lab_10 = new Chart(document.getElementById('lab_10'), {
+    type: "line",
+    data: {
+        labels: xValues,
+        datasets: [{
+            label: 'temp',
+            data: yValues,
+            borderColor: "red",
+            backgroundColor: "red",
+            fill: false
+        }, {
+            label: 'hum',
+            data: [1],
+            borderColor: "green",
+            backgroundColor: "green",
+            fill: false
+        }
+
+        ]
+    },
+
+    options: {
+        responsive: true,
+        legend: {
+            position: 'bottom',
+        },
+        hover: {
+            mode: 'label'
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Tid'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    beginAtZero: true,
+                    steps: 10,
+                    stepValue: 5,
+                    max: 80
+                }
+            }]
+        },
+        title: {
+            display: true,
+            text: 'Temp/Hum'
+        }
+    }
+})
+
 let chart_kafeterian = new Chart(document.getElementById('myChart'), {
     type: "line",
     data: {
@@ -355,6 +409,15 @@ firebase.database().ref('/Lab-ett/previous').on('value', (snapshot) => {
     if (data != null) {
         // console.log("Update chart")
         updateChartData(chart_lab_ett, data)
+    }
+
+})
+
+firebase.database().ref('/Lab-10/previous').on('value', (snapshot) => {
+    let data = snapshot.val()
+    if (data != null) {
+        // console.log("Update chart")
+        updateChartData(chart_lab_10, data)
     }
 
 })
