@@ -287,6 +287,15 @@ firebase.database().ref('/EntreplanPT/previous').on('value', (snapshot) => {
 
 })
 
+firebase.database().ref('/Lab-ett/previous').on('value', (snapshot) => {
+    let data = snapshot.val()
+    if (data != null) {
+        // console.log("Update chart")
+        updateChartData(chart_lab_ett, data)
+    }
+
+})
+
 
 
 
