@@ -1,0 +1,8 @@
+function kafeterian_button {
+    Document.getElementByClass("kafeterian").innerHTML = firebase.database().ref('/kafeterian/nu').on('value', (snapshot) => {
+        let data = snapshot.val()
+        if (data != null) {
+            console.log("kafeterian_temp")
+        }
+    })
+}
